@@ -1,0 +1,38 @@
+/**
+*   COLORS
+*/
+$bright_blue: hsl(220, 98%, 61%);
+$gradient: linear-gradient(120deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+
+/**
+*   COLORS - LIGHT THEME
+*/
+$very_light_gray_tlight: hsl(0, 0%, 98%);
+$very_light_grayish_blue_tlight: hsl(236, 33%, 92%);
+$light_grayish_blue_tlight: hsl(233, 11%, 84%);
+$dark_grayish_blue_tlight: hsl(236, 9%, 61%);
+$very_dark_grayish_blue_tlight: hsl(235, 19%, 35%);
+
+/**
+*   COLORS - DARK THEME
+*/
+$very_dark_blue_tdark: hsl(235, 21%, 11%);
+$very_dark_desaturated_blue_tdark: hsl(235, 24%, 19%);
+$light_grayish_blue_tdark: hsl(234, 39%, 85%);
+$light_grayish_blue_hover_tdark: hsl(236, 33%, 92%);
+$dark_grayish_blue_tdark: hsl(234, 11%, 52%);
+$very_dark_grayish_blue_dark_tdark: hsl(233, 14%, 35%);
+$very_dark_grayish_blue_hover_tdark: hsl(237, 14%, 26%);
+
+/**
+*   FONT
+*/
+$font: 'Josefin Sans', sans-serif;
+$regular: 400;
+$bold: 700;
+
+/**
+* SCREEN SIZES
+*/
+$mobile: 375px;
+$desktop: 1440px;

@@ -1,0 +1,31 @@
+header.top {
+    padding: 75px 0 40px;
+    h1 {
+        color: $very_light_gray_tlight;
+        font: $bold 40px $font;
+        letter-spacing: 15px;
+    }
+    div.theme-buttons {
+        button {
+            background: transparent;
+            border: 0 none;
+        }
+    }
+}
+
+
+@media screen and (max-width: $mobile) {
+    header.top {
+        padding: 45px 0 40px;
+        h1 {
+            font-size: 25px;
+            letter-spacing: 10px;
+        }
+        div.theme-buttons {
+            margin-top: -5px;
+            button {
+                scale: 0.9;
+            }
+        }
+    }
+}
