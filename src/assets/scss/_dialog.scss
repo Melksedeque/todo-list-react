@@ -1,3 +1,26 @@
+.css-ypiqx9-MuiDialogContent-root {
+    .css-wb57ya-MuiFormControl-root-MuiTextField-root {
+        fieldset {
+            display: none;
+        }
+        input {
+            background-color: transparent;
+            border: 1px solid $light_grayish_blue_tlight;
+            border-radius: 10px;
+            color: $very_dark_grayish_blue_tlight;
+            font: $regular 19px $font;
+            padding: 20px 20px 15px;
+            transition: all .25s ease;
+            &:hover, &:focus {
+                border-color: $very_dark_grayish_blue_tlight;
+            }
+        }
+    }
+}
+
 .css-hlj6pa-MuiDialogActions-root {
-    padding: 10px 25px 20px;
+    padding: 10px 25px 20px !important;
+    button.dialog-button {
+        margin-left: 30px;
+    }
 }
