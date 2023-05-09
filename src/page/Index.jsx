@@ -64,7 +64,27 @@ export default function Index() {
 
                 <Container style={{ marginTop: "1em", padding: 0 }}>
                     <Form addTodo={addTodo} onSubmit={addTodo} />
-                    <List sx={{ marginTop: "1em" }}>
+                    <section class="list-todo">
+                        <ul className="list-items">
+                            {/* <button class="complete">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9"><path fill="none" stroke="#FFF" stroke-width="2" d="M1 4.304L3.696 7l6-6"></path></svg>
+                            </button>
+                            <span class="title">Complete ToDo App on Frontend Mentor</span>
+                            <button class="delete">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"><path fill="#494C6B" fill-rule="evenodd" d="M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z"></path></svg>
+                            </button> */}
+                            {todos.map((todo) => (
+                                <div key={todo.id} fullWidth>
+                                    <ToDoItem
+                                        todo={todo}
+                                        editTodo={editTodo}
+                                        deleteTodo={deleteTodo}
+                                    />
+                                </div>
+                            ))}
+                        </ul>
+                    </section>
+                    {/* <List sx={{ marginTop: "1em" }}>
                         {todos.map((todo) => (
                             <div key={todo.id} style={{ marginTop: "1em" }}>
                                 <ToDoItem
@@ -74,7 +94,7 @@ export default function Index() {
                                 />
                             </div>
                         ))}            
-                    </List>
+                    </List> */}
                 </Container>
             </div>
         </main>
