@@ -40,8 +40,8 @@ export default function EditToDo({open, dialogHandler, todo, editTodo}) {
                 />
             </DialogContent>
             <DialogActions>
-                <Button onClick={dialogHandler}>Cancel</Button>
-                <Button onClick={textHandler} autoFocus>
+                <Button onClick={dialogHandler} variant="contained" color="error">Cancel</Button>
+                <Button onClick={textHandler}  variant="contained" autoFocus>
                     Ok
                 </Button>
             </DialogActions>
