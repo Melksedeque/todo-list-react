@@ -17,41 +17,39 @@ export default function ToDoItem({todo, editTodo, deleteTodo}) {
     }
   
     return (
-    <div>
+    <li className="item">
         <EditToDo
             open={openEditDialog}
             dialogHandler={dialogHandler}
             todo={todo}
             editTodo={editTodo}
         />
-        <Paper style={{ padding: "0em" }}>
-            <ListItem
-                secondaryAction={
-                    <IconButton
-                        edge="end"
-                        aria-label="delete"
-                        onClick={ () => deleteTodo(todo.id) }
-                    >
-                        <ClearIcon />
-                    </IconButton>
-                }
-                disablePadding
+        <ListItem style={{padding: 0}}
+            secondaryAction={
+                <IconButton
+                    edge="end"
+                    aria-label="delete"
+                    onClick={ () => deleteTodo(todo.id) }
                 >
-                <ListItemButton role={undefined} dense>
-                    <ListItemIcon>
-                        <Checkbox
-                            edge="start"
-                            tabIndex={-1}
-                            disableRipple
-                            />
-                    </ListItemIcon>
-                    <ListItemText
-                        primary={todo.text}
-                        onClick={() => setOpenEditDialog(true)}
-                    />
-                </ListItemButton>
-            </ListItem>
-        </Paper>
-    </div>
+                    <ClearIcon />
+                </IconButton>
+            }
+            disablePadding
+            >
+            <ListItemButton role={undefined} dense>
+                <ListItemIcon>
+                    <Checkbox
+                        edge="start"
+                        tabIndex={-1}
+                        disableRipple
+                        />
+                </ListItemIcon>
+                <ListItemText
+                    primary={todo.text}
+                    onClick={() => setOpenEditDialog(true)}
+                />
+            </ListItemButton>
+        </ListItem>
+    </li>
     );
 }
