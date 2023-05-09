@@ -1,4 +1,5 @@
 main#page {
+    min-height: 100vh;
     transition: all .25s ease;
     &.light-theme {
         background: url('../../images/bg-desktop-light.jpg') center top no-repeat $very_light_gray_tlight;
@@ -69,9 +70,10 @@ main#page {
                 background: white;
                 border-bottom: 1px solid $very_light_grayish_blue_tlight;
                 display: flex;
-                line-height: 60px;
-                justify-content: flex-start;
                 flex: 1 1 100%;
+                justify-content: flex-start;
+                line-height: 60px;
+                padding: 5px;
                 transition: all .25s ease;
                 z-index: 10;
                 button.complete {
