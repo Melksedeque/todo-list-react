@@ -6,7 +6,7 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
 import { TextField } from '@mui/material';
 
-export default function EditToDo({open, dialogHandler, todo, editTodo}) {
+export default function EditToDo({open, dialogHandler, todo, editTodo, isLightTheme}) {
     const [editedText, setEditedText] = React.useState(todo.text);
     
     const textHandler = () => {
@@ -26,6 +26,7 @@ export default function EditToDo({open, dialogHandler, todo, editTodo}) {
             onClose={dialogHandler}
             aria-labelledby="alert-dialog-title"
             aria-describedby="alert-dialog-description"
+            className={`${isLightTheme ? 'light-theme' : 'dark-theme'}`}
             fullWidth
         >
             <DialogTitle id="alert-dialog-title">
