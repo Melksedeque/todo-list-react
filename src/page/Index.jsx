@@ -21,7 +21,7 @@ export default function Index() {
         setTodos(newList);
     }
 
-    const editTodo = (id, editedText) => {
+    const fTodo = (id, editedText) => {
         let todosArray = [...todos];
         for (let i in todosArray) {
             if(todosArray[i].id === id) {
@@ -77,17 +77,6 @@ export default function Index() {
                             ))}
                         </ul>
                     </section>
-                    {/* <List sx={{ marginTop: "1em" }}>
-                        {todos.map((todo) => (
-                            <div key={todo.id} style={{ marginTop: "1em" }}>
-                                <ToDoItem
-                                    todo={todo}
-                                    editTodo={editTodo}
-                                    deleteTodo={deleteTodo}
-                                />
-                            </div>
-                        ))}            
-                    </List> */}
                 </Container>
             </div>
         </main>
