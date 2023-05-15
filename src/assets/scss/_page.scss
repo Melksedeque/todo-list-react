@@ -122,12 +122,20 @@ main#page {
                     border: 0 none;
                     cursor: pointer;
                     opacity: 0;
-                    margin: 0 23px;
+                    margin: 0 20px 0 10px;
                     transition: all .25s ease;
+                    svg {
+                        fill: $light_grayish_blue_tlight;
+                    }
                 }
                 &:hover {
                     button.delete {
                         opacity: 1;
+                        &:hover {
+                            svg{
+                                fill: tomato;
+                            }
+                        }
                     }
                 }
 
@@ -230,7 +238,9 @@ main#page {
                     span.title {
                         color: $light_grayish_blue_tdark;
                     }
-
+                    button.delete {
+                        
+                    }
                     &.completed {
                         button.complete {
                             background: $gradient;
