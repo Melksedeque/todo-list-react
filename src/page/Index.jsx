@@ -21,7 +21,7 @@ export default function Index() {
         setTodos(newList);
     }
 
-    const fTodo = (id, editedText) => {
+    const editTodo = (id, editedText) => {
         let todosArray = [...todos];
         for (let i in todosArray) {
             if(todosArray[i].id === id) {
