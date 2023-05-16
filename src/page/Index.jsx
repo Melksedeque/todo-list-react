@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Form from '../components/Form';
 import ListItem from '../components/ListItem';
 import { Container } from '@mui/material';
@@ -28,6 +28,17 @@ export default function Index() {
         }
         setTodos(todosArray);
     }
+
+    useEffect(() => {
+        const savedTodos = JSON.parse(localStorage.getItem('todos'));
+        if (savedTodos !== null) {
+            setTodos(savedTodos);
+        }
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem('todos', JSON.stringify(todos));
+    }, [todos]);
 
     return (
         <>
