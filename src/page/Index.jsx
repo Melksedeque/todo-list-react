@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import Form from '../components/Form';
 import ListItem from '../components/ListItem';
-import { Container, List } from '@mui/material';
+import { Container } from '@mui/material';
 
 export default function Index() {
     const [todos, setTodos] = useState([]);
     const [isLightTheme, setIsLightTheme] = useState(true);
-    const [dataLoaded, setDataLoaded] = useState(false);
 
     const toggleTheme = () => {
         setIsLightTheme(!isLightTheme);
@@ -17,8 +16,7 @@ export default function Index() {
     }
 
     const deleteTodo = (id) => {
-        let newList = todos.filter((todo) => todo.id !== id);
-        setTodos(newList);
+        setTodos(todos.filter((todo) => todo.id !== id));
     }
 
     const editTodo = (id, editedText) => {
@@ -30,21 +28,6 @@ export default function Index() {
         }
         setTodos(todosArray);
     }
-
-    useEffect(() => {
-        const storedTodos = localStorage.getItem('todos');
-        if (storedTodos) {
-            setTodos(JSON.parse(storedTodos));
-            setDataLoaded(true);
-        }
-    }, []);
-
-    useEffect(() => {
-        if (dataLoaded) {
-            localStorage.setItem('todos', JSON.stringify(todos));
-        }
-    }, [todos]);
-
 
     return (
         <>
@@ -67,7 +50,7 @@ export default function Index() {
                     <section class="list-todo">
                         <ul className="list-items">
                             {todos.map((todo) => (
-                                <div key={todo.id} fullWidth>
+                                <div key={todo.id}>
                                     <ListItem
                                         todo={todo}
                                         editTodo={editTodo}
